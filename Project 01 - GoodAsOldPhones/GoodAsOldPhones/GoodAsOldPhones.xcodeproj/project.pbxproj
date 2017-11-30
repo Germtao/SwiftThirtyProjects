@@ -14,6 +14,7 @@
 		2B42128E1FCFAFB6009CF7D6 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B42128D1FCFAFB6009CF7D6 /* Product.swift */; };
 		2B4212901FCFB0AB009CF7D6 /* ProductsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B42128F1FCFB0AB009CF7D6 /* ProductsTableViewController.swift */; };
 		2B4212921FCFB4EB009CF7D6 /* ProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4212911FCFB4EB009CF7D6 /* ProductsViewController.swift */; };
+		2B4212941FCFE54D009CF7D6 /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4212931FCFE54D009CF7D6 /* ContactViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		2B42128D1FCFAFB6009CF7D6 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		2B42128F1FCFB0AB009CF7D6 /* ProductsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsTableViewController.swift; sourceTree = "<group>"; };
 		2B4212911FCFB4EB009CF7D6 /* ProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewController.swift; sourceTree = "<group>"; };
+		2B4212931FCFE54D009CF7D6 /* ContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				2B42127B1FCFAABC009CF7D6 /* AppDelegate.swift */,
 				2B42128F1FCFB0AB009CF7D6 /* ProductsTableViewController.swift */,
 				2B4212911FCFB4EB009CF7D6 /* ProductsViewController.swift */,
+				2B4212931FCFE54D009CF7D6 /* ContactViewController.swift */,
 				2B42128D1FCFAFB6009CF7D6 /* Product.swift */,
 				2B42127F1FCFAABC009CF7D6 /* Main.storyboard */,
 				2B4212821FCFAABC009CF7D6 /* Assets.xcassets */,
@@ -146,6 +149,7 @@
 				2B42127C1FCFAABC009CF7D6 /* AppDelegate.swift in Sources */,
 				2B42128E1FCFAFB6009CF7D6 /* Product.swift in Sources */,
 				2B4212921FCFB4EB009CF7D6 /* ProductsViewController.swift in Sources */,
+				2B4212941FCFE54D009CF7D6 /* ContactViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
