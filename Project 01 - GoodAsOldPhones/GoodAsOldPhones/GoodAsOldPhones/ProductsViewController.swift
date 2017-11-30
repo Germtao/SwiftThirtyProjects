@@ -19,10 +19,14 @@ class ProductsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        productNameLabel.text = product?.name
         
-        
+        if let imageName = product?.fullscreenImageName {
+            productImageView.image = UIImage(named: imageName)
+        }
     }
     
     @IBAction func addToCardButtonDidTap(_ sender: Any) {
+        print("Add to card successfully")
     }
 }
