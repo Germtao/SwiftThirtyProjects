@@ -13,8 +13,13 @@ class ProductsViewController: UIViewController {
     @IBOutlet weak var productNameLabel: UILabel!
     @IBOutlet weak var productImageView: UIImageView!
     
-    
     var product: Product?
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+        hidesBottomBarWhenPushed = false
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

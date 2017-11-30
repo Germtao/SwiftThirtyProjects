@@ -12,7 +12,7 @@ class ProductsTableViewController: UITableViewController {
     
     private var products: [Product]?
     private let cellID = "productCell"
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -59,6 +59,7 @@ class ProductsTableViewController: UITableViewController {
                 let productVC = segue.destination as? ProductsViewController else {
                     return
             }
+            productVC.hidesBottomBarWhenPushed = true
             productVC.product = products?[indexPath.row]
         }
     }
