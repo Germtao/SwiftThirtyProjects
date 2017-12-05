@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--ToDo List-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Todo" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nBO-19-jah">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nBO-19-jah">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -58,11 +58,14 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <constraints>
-                                            <constraint firstItem="q0z-Yq-KzA" firstAttribute="leading" secondItem="Wfh-Ih-Qm6" secondAttribute="leading" constant="20" id="6IX-BO-vKh"/>
-                                            <constraint firstAttribute="trailing" secondItem="cbF-id-LkZ" secondAttribute="trailing" constant="5" id="cyU-G2-hin"/>
-                                            <constraint firstItem="q0z-Yq-KzA" firstAttribute="top" secondItem="Wfh-Ih-Qm6" secondAttribute="top" constant="10" id="hfA-Ft-98x"/>
-                                            <constraint firstAttribute="trailing" secondItem="hia-04-Fz7" secondAttribute="trailing" constant="5" id="tF6-dd-xQN"/>
+                                            <constraint firstItem="q0z-Yq-KzA" firstAttribute="leading" secondItem="se3-O7-HEW" secondAttribute="leading" constant="20" id="6IX-BO-vKh"/>
+                                            <constraint firstItem="se3-O7-HEW" firstAttribute="trailing" secondItem="cbF-id-LkZ" secondAttribute="trailing" constant="5" id="cyU-G2-hin"/>
+                                            <constraint firstItem="q0z-Yq-KzA" firstAttribute="top" secondItem="se3-O7-HEW" secondAttribute="top" constant="10" id="hfA-Ft-98x"/>
+                                            <constraint firstItem="se3-O7-HEW" firstAttribute="trailing" secondItem="hia-04-Fz7" secondAttribute="trailing" constant="5" id="tF6-dd-xQN"/>
                                         </constraints>
+                                        <connections>
+                                            <segue destination="xCS-7g-6vg" kind="show" identifier="editTodo" id="OFd-YB-3Ck"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -80,13 +83,35 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="GFZ-pA-38D">
-                        <barButtonItem key="rightBarButtonItem" title="+" id="5dP-K1-aiR"/>
+                    <navigationItem key="navigationItem" title="ToDo List" id="GFZ-pA-38D">
+                        <barButtonItem key="rightBarButtonItem" title="+" id="5dP-K1-aiR">
+                            <connections>
+                                <segue destination="xCS-7g-6vg" kind="show" identifier="addTodo" id="eZ6-c1-3zQ"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="todoTableView" destination="nBO-19-jah" id="eA4-Hu-hFM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="476" y="133.5832083958021"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="jHb-wg-ymU">
+            <objects>
+                <viewController id="xCS-7g-6vg" customClass="DetailViewController" customModule="Todo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nc0-RI-VPm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="CwQ-RO-oK7"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2wK-2q-sdy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1194" y="134"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="z58-w9-tUz">
@@ -107,4 +132,7 @@
             <point key="canvasLocation" x="-241" y="134"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="OFd-YB-3Ck"/>
+    </inferredMetricsTieBreakers>
 </document>
