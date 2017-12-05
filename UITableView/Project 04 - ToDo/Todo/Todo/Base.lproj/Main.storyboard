@@ -108,19 +108,19 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J65-R9-n0v" userLabel="child">
                                 <rect key="frame" x="35" y="124" width="50" height="50"/>
-                                <state key="normal" image="child"/>
+                                <state key="normal" backgroundImage="child"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q2E-SI-87b" userLabel="phone">
                                 <rect key="frame" x="120" y="124" width="50" height="50"/>
-                                <state key="normal" image="phone"/>
+                                <state key="normal" backgroundImage="phone"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RPL-11-2IY" userLabel="shopping">
                                 <rect key="frame" x="205" y="124" width="50" height="50"/>
-                                <state key="normal" image="shopping-cart"/>
+                                <state key="normal" backgroundImage="shopping-cart"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fdT-aH-qVY" userLabel="travel">
                                 <rect key="frame" x="290" y="124" width="50" height="50"/>
-                                <state key="normal" image="travel"/>
+                                <state key="normal" backgroundImage="travel"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Todo Tiltle:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VWy-N6-uj3">
                                 <rect key="frame" x="35" y="220" width="84.5" height="21"/>
@@ -171,6 +171,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="CwQ-RO-oK7"/>
                     </view>
+                    <connections>
+                        <outlet property="childBtn" destination="J65-R9-n0v" id="xvV-BJ-Per"/>
+                        <outlet property="phoneBtn" destination="Q2E-SI-87b" id="UOW-fg-sQk"/>
+                        <outlet property="shopBtn" destination="RPL-11-2IY" id="GOM-uP-qfQ"/>
+                        <outlet property="todoDatepicker" destination="GXV-Zq-FRA" id="yBz-0V-KgA"/>
+                        <outlet property="todoTextField" destination="WMO-vD-ngX" id="0bE-nV-6De"/>
+                        <outlet property="travelBtn" destination="fdT-aH-qVY" id="hxR-Jg-gyp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2wK-2q-sdy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
