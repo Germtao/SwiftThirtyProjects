@@ -6,9 +6,7 @@
     <dependencies>
         <deployment version="2304" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
-        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Baseline standard spacing" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -54,12 +52,18 @@
                                     <constraint firstAttribute="height" constant="60" id="Pgb-oU-1Q8"/>
                                 </constraints>
                                 <state key="normal" title="Lap"/>
+                                <connections>
+                                    <action selector="lapResetBtnDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zzp-i9-oMX"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jIB-eW-rVI">
                                 <rect key="frame" x="213" y="243" width="60" height="60"/>
                                 <state key="normal" title="Start">
                                     <color key="titleColor" red="0.31405839320000001" green="0.8091822863" blue="0.52013492579999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="playPauseBtnDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9z2-ek-zYV"/>
+                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ENB-Kb-2W3" userLabel="Laps Table View">
                                 <rect key="frame" x="0.0" y="303" width="375" height="364"/>
@@ -72,7 +76,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HJX-EO-jIL" userLabel="Label1">
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="11" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HJX-EO-jIL" userLabel="Label1">
                                                     <rect key="frame" x="45" y="21.5" width="61" height="0.0"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="61" id="CK2-y7-KQU"/>
@@ -81,8 +85,8 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gwd-Zy-GOl" userLabel="Label2">
-                                                    <rect key="frame" x="246" y="-23.5" width="114" height="45"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="12" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gwd-Zy-GOl" userLabel="Label2">
+                                                    <rect key="frame" x="246" y="21.5" width="114" height="0.0"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="114" id="gkq-aM-PBb"/>
                                                     </constraints>
@@ -92,15 +96,18 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="Gwd-Zy-GOl" firstAttribute="baseline" secondItem="HJX-EO-jIL" secondAttribute="baseline" id="9qA-Um-K5i"/>
                                                 <constraint firstAttribute="trailing" secondItem="Gwd-Zy-GOl" secondAttribute="trailing" constant="15" id="CFC-rf-Ibw"/>
-                                                <constraint firstItem="Gwd-Zy-GOl" firstAttribute="baseline" secondItem="HJX-EO-jIL" secondAttribute="baseline" id="EZv-pZ-KHl"/>
                                                 <constraint firstItem="HJX-EO-jIL" firstAttribute="centerY" secondItem="xZt-ls-IWN" secondAttribute="centerY" id="RU7-Zf-oxK"/>
                                                 <constraint firstItem="HJX-EO-jIL" firstAttribute="leading" secondItem="xZt-ls-IWN" secondAttribute="leading" constant="45" id="n0F-bm-cis"/>
-                                                <constraint firstItem="HJX-EO-jIL" firstAttribute="baseline" secondItem="Gwd-Zy-GOl" secondAttribute="firstBaseline" constant="24" symbolType="layoutAnchor" id="tTY-zl-TrC"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="XZ1-KL-rG9"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="DNA-VE-B6V"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="0.9733584206" green="0.9733584206" blue="0.9733584206" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -123,6 +130,13 @@
                         <viewLayoutGuide key="safeArea" id="gVQ-eq-taW"/>
                     </view>
                     <navigationItem key="navigationItem" title="Stopwatch" id="dRX-je-vRv"/>
+                    <connections>
+                        <outlet property="lapResetBtn" destination="ARj-Ua-s9F" id="C47-qJ-ch9"/>
+                        <outlet property="lapTimerLabel" destination="Yxs-UB-9lA" id="tV7-NY-lHk"/>
+                        <outlet property="lapsTableView" destination="ENB-Kb-2W3" id="CHD-Dk-USR"/>
+                        <outlet property="startPauseBtn" destination="jIB-eW-rVI" id="82Q-r0-Kir"/>
+                        <outlet property="timerLabel" destination="CJB-IJ-ffD" id="v2a-oh-tlN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
