@@ -8,9 +8,9 @@
 
 import UIKit
 
+var todoArray: [TodoItem] = []
+
 class ViewController: UIViewController {
-    
-    var todoArray: [TodoItem] = []
 
     @IBOutlet weak var todoTableView: UITableView!
     
@@ -37,7 +37,7 @@ class ViewController: UIViewController {
             let indexPath = todoTableView.indexPathForSelectedRow
             
             if let indexPath = indexPath {
-                vc.todoItem = todoArray[(indexPath.row)]
+                vc.todoItem = todoArray[indexPath.row]
             }
         }
     }
